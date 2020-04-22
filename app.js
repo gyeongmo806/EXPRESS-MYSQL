@@ -14,7 +14,6 @@ connection.connect( (err) => {
     console.log("Mysql Connect!")
 })
 
-
 app.get('/', (req,res) => {
     res.send("Hello")
 })
