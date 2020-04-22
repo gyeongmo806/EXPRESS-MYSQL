@@ -1,0 +1,15 @@
+extends ./layout.pug
+block content
+    .container
+        .section
+            .title.text-center
+                    h2 게시물 작성
+            .article
+                .div
+                    form(action="/api/create" method="POST")
+                        p
+                            input(class="form-control" name="title" id="title" type="text" placeholder="Title Input")
+                        p
+                            textarea(class="form-control" type="text" name="des", cols="30", rows="10")
+                        p
+                            button(class="btn btn-primary" type="submit") Submit

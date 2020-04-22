@@ -1,0 +1,16 @@
+extends ./layout.pug
+block content
+    .container 
+        .section
+            .title.text-center
+                h2 게시글 목록
+            .article
+                .contents-list
+                    ul.list-group
+                        each item in data
+                            a(href="/read/"+item.id).list-group-item
+                                span= item.name
+            .text-right
+                a.btn.btn-primary(href="/create") write
+    script(src='/script.js')
+         

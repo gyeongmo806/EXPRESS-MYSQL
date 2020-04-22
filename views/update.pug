@@ -1,0 +1,15 @@
+extends ./layout.pug
+block content
+    .container
+        .section
+            .title.text-center
+                    h2 게시물 수정
+            .article
+                .div
+                    form(action="/api/update/"+data.id method="POST")
+                        p
+                            input(class="form-control" name="title" id="title" type="text" value= data.title)
+                        p
+                            textarea(class="form-control" name="des", cols="30", rows="10")= data.des
+                        p
+                            input.btn.btn-primary(type="submit")

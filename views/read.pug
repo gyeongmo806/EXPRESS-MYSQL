@@ -1,0 +1,19 @@
+extends ./layout.pug
+block content
+    .container
+        .section
+            .article
+            .card
+                .card-body
+                    .card-title
+                        h4= data.name
+                    .card-text= data.description
+                    a(class="card-link" href="#" onclick=`del(${data.id})`) Delete
+                    a(class="card-link" href="#" onclick=`location.href='/update/${data.id}'`) Update
+    
+        
+        
+    
+    
+                    
+                
